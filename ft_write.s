@@ -10,7 +10,8 @@ _ft_write:
 
 _error:
 	mov r15, rax
+	push r15
 	call ___error
-	mov [rax], r15
+	pop qword[rax]
 	mov rax, -1
 	ret
